@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each message in messages
+      li
+        p= message.text
+        p= 'Posted by ' + message.user + ' on ' + message.added.toLocaleString()
